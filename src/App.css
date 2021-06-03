@@ -1,38 +1,186 @@
 .App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  padding: 50px;
+  font-size: 3rem;
+  font-weight: bold;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.tag-pool {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 40%;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.tag-card {
+  border: 1px solid grey;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.tag-card.selected {
+  background-color: rgb(44, 44, 44);
+  color: white;
+}
+.tag-card:hover {
+  background-color: lightgray;
+  color: white;
+  cursor: pointer;
+}
+.tag-card:active {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.search-refresh-container {
+  display: flex;
+  min-width: 40vw;
+  min-height: 50px;
+  margin-left: 25px;
+}
+.search-input,
+.search-input:focus-visible {
+  -webkit-appearance: none;
+  outline: none;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  flex: 1;
+  margin: 10px;
+}
+
+.refresh-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  border: 2px solid grey;
+  flex: 1;
+  text-align: center;
+  color: gray;
+  margin: 10px;
+}
+
+.refresh-btn:hover {
+  background-color: gray;
+  color: white;
+}
+
+.refresh-btn:active {
+  background-color: white;
+  color: grey;
+}
+
+.tutorial-list {
+  min-width: 40vw;
+  list-style: none;
+  padding: 0;
+}
+
+.tutorial-card {
+  display: flex;
+  border: 2px solid lightgrey;
+  border-radius: 20px;
+  padding: 5px;
+  width: 100%;
+  height: 10vh;
+  margin: 5px;
+}
+
+.tutorial-card-tags-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.tutorial-card-tags {
+}
+
+.title-teacher-container {
+}
+
+.tutorial-title-teacher-container {
+  flex: 5;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tutorial-card-title {
+  font-size: 2em;
+}
+
+.tutorial-card-teacher {
+}
+
+.tutorial-card-rating {
+  flex: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.tutorial-card-rating span {
+  font-size: 2em;
 }
 
-.App-link {
-  color: #61dafb;
+.results-label {
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 768px) {
+  .App {
   }
-  to {
-    transform: rotate(360deg);
+  .header {
+    padding: 20px;
+    font-size: 2rem;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .tag-pool {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 90%;
+  }
+
+  .search-refresh-container {
+    flex-direction: column;
+  }
+  .tutorial-list {
+    list-style: none;
+    width: 80vw;
+  }
+
+  .tutorial-card {
+    border: 2px solid lightgrey;
+    border-radius: 20px;
+    padding: 5px;
+    width: 100%;
+    height: 20vh;
+    margin: 5px;
+  }
+  .tutorial-card-rating span {
+    font-size: 1rem;
+  }
+  .tutorial-card-title {
+    font-size: 1.5rem;
   }
 }
