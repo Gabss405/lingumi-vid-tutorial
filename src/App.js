@@ -68,7 +68,11 @@ function App() {
           <div className="tutorial-card">
             <div className="tutorial-card-tags-container">
               {tutorial.tags.map((tag, idx) => {
-                return <span key={idx}>#{tag}</span>;
+                return (
+                  <span className="tutorial-card-tags" key={idx}>
+                    #{tag}
+                  </span>
+                );
               })}
             </div>
             <div className="tutorial-title-teacher-container">
